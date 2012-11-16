@@ -1,6 +1,6 @@
 (ns tic-tac-doom.core)
 
-(defn foo
+(defn analyze
   "I don't do a whole lot."
-  [x]
-  (println x "Hello, World!"))
+  [board]
+  [])
