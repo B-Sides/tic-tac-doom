@@ -1,10 +1,10 @@
 # tic-tac-doom
 
-A Clojure library designed to ... well, that part is up to you.
+A Clojure application to play tic-tac-toe.
 
 ## Usage
-
-FIXME
+**Running the Tests**
+```lein midje```
 
 ## License
 
