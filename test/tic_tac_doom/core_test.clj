@@ -34,4 +34,4 @@
 (fact "Nobody wins if neither X or O has three in a row/column/diagonal"
       (tic-tac-doom/analyze [[:x :o :x]
                              [:x :o :x]
-                             [:o :x :o]]) => :o)
+                             [:o :x :o]]) => nil)
