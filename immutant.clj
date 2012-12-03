@@ -1,8 +1,8 @@
 (ns tic-tac-doom.init
-  ;(:use tic-tac-doom.core)
+  (:use tic-tac-doom.core)
   (:require [immutant.messaging :as messaging]
             [immutant.web :as web]
-            [immutant.utilities :as util]))
+            [immutant.util :as util]))
 
 ;; This file will be loaded when the application is deployed to Immutant, and
 ;; can be used to start services your app needs. Examples:
@@ -12,7 +12,7 @@
 ;; path given here is a sub-path to the global context-path for the app
 ;; if any.
 
-; (web/start "/" my-ring-handler)
+(web/start "/" hello-world-handler)
 ; (web/start "/foo" a-different-ring-handler)
 
 ;; To start a Noir app:
