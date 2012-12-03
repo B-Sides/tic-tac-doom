@@ -52,3 +52,17 @@ if [ ! -d ${OPENSHIFT_GEAR_DIR}${OPENSHIFT_GEAR_TYPE}/modules/org/projectodd/pol
     ln -s ${OPENSHIFT_DATA_DIR}/polyglot-cache-${POLYGLOT_VERSION}-module ${OPENSHIFT_REPO_DIR}/.openshift/config/modules/org/projectodd/polyglot/cache/main
 fi
 
+# Ensure a deployments directory exists
+mkdir -p ${OPENSHIFT_REPO_DIR}/deployments
+
+# Remove any existing deployment descriptors
+rm -f ${OPENSHIFT_REPO_DIR}/deployments/*.clj
+
+# Find the Clojure project and create a deployment descriptor
+echo "Deploying tic-tac-doom"
+
+cat <<__EOF__ > ${OPENSHIFT_REPO_DIR}/deployments/tic-tac-doom.clj
+{:root "${OPENSHIFT_REPO_DIR}"}
+__EOF__
+
+touch ${OPENSHIFT_REPO_DIR}/deployments/tic-tac-doom.clj.dodeploy

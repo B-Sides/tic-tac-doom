@@ -3,18 +3,3 @@
 # build hook has been run but before the application has been started back
 # up again.  This script gets executed directly, so it could be python, php,
 # ruby, etc.
-
-# Ensure a deployments directory exists
-mkdir -p ${OPENSHIFT_REPO_DIR}/deployments
-
-# Remove any existing deployment descriptors
-rm -f ${OPENSHIFT_REPO_DIR}/deployments/*.clj
-
-# Find the Clojure project and create a deployment descriptor
-echo "Deploying tic-tac-doom"
-
-cat <<__EOF__ > ${OPENSHIFT_REPO_DIR}/deployments/tic-tac-doom.clj
-{:root "${OPENSHIFT_REPO_DIR}"}
-__EOF__
-
-touch ${OPENSHIFT_REPO_DIR}/deployments/tic-tac-doom.clj.dodeploy
