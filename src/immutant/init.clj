@@ -1,4 +1,4 @@
-(ns tic-tac-doom.init
+(ns immutant.init
   (:use tic-tac-doom.core)
   (:require [immutant.messaging :as messaging]
             [immutant.web :as web]
