@@ -12,7 +12,7 @@
 ;; path given here is a sub-path to the global context-path for the app
 ;; if any.
 
-(web/start "/" hello-world-handler)
+ (web/start "/" hello-world-handler)
 ; (web/start "/foo" a-different-ring-handler)
 
 ;; To start a Noir app:

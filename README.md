@@ -3,8 +3,9 @@
 A Clojure application to play tic-tac-toe.
 
 ## Usage
-**Running the Tests**
-```lein midje```
+**Running the Tests** `lein midje`
+
+**Running a Benchmark** `lein exec -p benchmarks/tic-tac-doom/core.clj`
 
 ## License
 
