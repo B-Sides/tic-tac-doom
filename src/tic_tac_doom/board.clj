@@ -1,9 +1,8 @@
 (ns tic-tac-doom.board)
 
 (defn check-solution [elements]
-  (if (= (first elements) :e)
-    nil
-    (if (apply = elements) (first elements) nil)))
+  (when-not (= (first elements) :e)
+    (when (apply = elements) (first elements))))
 
 (defn columns [elements]
   (apply interleave elements))
