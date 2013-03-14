@@ -7,5 +7,5 @@
                  [midje "1.5.0"]
                  [criterium "0.3.1"]
                  [org.immutant/immutant "0.7.0"]]
-  :plugins [[lein-midje "2.0.1"]
+  :plugins [[lein-midje "3.0.0"]
             [perforate "0.3.0"]])
